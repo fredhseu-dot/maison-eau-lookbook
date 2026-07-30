@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MAISON D'EAU 精品水感電子雜誌。">
+  <title>MAISON D'EAU — Lookbook</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="gallery-shell" aria-label="MAISON D'EAU 電子雜誌閱讀器">
+    <header class="masthead">
+      <p class="edition">ÉDITION PRIVÉE · 2026</p>
+      <h1>MAISON <em>D'EAU</em></h1>
+      <p class="subtitle">A study in water, movement &amp; quiet radiance</p>
+    </header>
+
+    <section class="reader" aria-label="翻頁雜誌">
+      <div class="stage" id="stage">
+        <canvas id="magazine" aria-label="可使用左右方向鍵、按鈕或拖曳頁角翻閱的雜誌"></canvas>
+        <div class="corner-hint hint-right" aria-hidden="true"><i></i><span>DRAG TO TURN</span></div>
+        <div class="corner-hint hint-left" aria-hidden="true"><i></i></div>
+        <div class="loading" id="loading" role="status">CURATING PAGES…</div>
+      </div>
+      <p class="reader-instruction" id="readerInstruction">拖曳右側頁角翻至下一頁</p>
+    </section>
+
+    <footer class="controls" aria-label="雜誌控制項">
+      <button class="nav-button" id="previous" type="button" aria-label="上一頁"><span aria-hidden="true">←</span></button>
+      <div class="pagination" aria-live="polite"><span id="pageCurrent">01</span><i></i><span id="pageTotal">00</span></div>
+      <button class="nav-button" id="next" type="button" aria-label="下一頁"><span aria-hidden="true">→</span></button>
+    </footer>
+    <div class="progress-track" aria-hidden="true"><div id="progressBar"></div></div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
